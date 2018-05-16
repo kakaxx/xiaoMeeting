@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/mango.iml" filepath="$PROJECT_DIR$/mango.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xiaoMeeting.iml" filepath="$PROJECT_DIR$/xiaoMeeting.iml" />
     </modules>
   </component>
 </project>
