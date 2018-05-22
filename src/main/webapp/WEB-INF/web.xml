@@ -6,6 +6,19 @@
          version="3.1"
          metadata-complete="true">
 
+  <!--设置log4j配置文件-->
+  <context-param>
+    <param-name>log4jConfigLocation</param-name>
+    <param-value>classpath:log4j.properties</param-value>
+  </context-param>
+  <!--log4j的初始化类-->
+  <listener>
+    <listener-class>
+      org.springframework.web.util.Log4jConfigListener
+    </listener-class>
+  </listener>
+
+
   <!--配置DispatcherServlet 所有请求交由DispatcherServlet处理-->
   <servlet>
     <servlet-name>mango-dispatcher</servlet-name>

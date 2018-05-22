@@ -12,6 +12,8 @@ import cn.li.util.StringUtils;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -23,6 +25,8 @@ import java.util.Map;
 public class StudentServiceImpl implements StudentService {
     @Resource
     StudentDao studentDao;
+
+    private Logger logger = LoggerFactory.getLogger(this.getClass());
 
     public ResponseData autoLogin(String token) {
         if (!StringUtils.isEmpty(token)) {
@@ -72,7 +76,6 @@ public class StudentServiceImpl implements StudentService {
         student.setPassWord(password);
         student.setStudentNum(studentNum);
         student.setName(StringUtils.getUUID());
-        System.out.println(student);
         int flag = studentDao.addUser(student);
         if (flag == 1) {
             return ResponseDataUtil.build(1, "注册成功", null);
@@ -86,19 +89,25 @@ public class StudentServiceImpl implements StudentService {
             if (studentDao.findUserByStuNum(studentNum) != null) {
                 return ResponseDataUtil.build(-3, "该学号已注册", null);
             }
-            String result = HttpUtils.sendGet(studentNum);
-            if(result==null){
-                return ResponseDataUtil.build(-3,"sendGet未成功返回",result);
+            String result = null;
+            try {
+                result = HttpUtils.sendGet(studentNum);
+            } catch (Exception e) {
+                System.out.println(1);
+                logger.error(e.getMessage(), e); //加日志
             }
-            System.out.println(result);
+
+            if(result==null){
+                return ResponseDataUtil.build(-3, "请求失败", null);
+            }
 
             //Map<String,Object> allData = JSON.parseObject(result,Map.class);
             JSONObject jsonObject = JSON.parseObject(result);
             if(jsonObject==null){
-                return ResponseDataUtil.build(-4,"jsonObject解析为成功",null);
+                return ResponseDataUtil.build(-4, "jsonObject解析失败", null);
             }
-            if (jsonObject.getInteger("status") != 200 || result == null ) {//请求失败
-                return new ResponseData(-2, "网络请求异常");
+            if (jsonObject.getInteger("status") != 200) {//请求失败
+                return new ResponseData(-2, "网络异常");
             } else {
                 //Map<String,Object> temp = JSON.parseObject(allData.get("data").toString(),Map.class);
                 //Map<String,String> data = JSON.parseObject(temp.get("rows").toString(),Map.class);
@@ -108,10 +117,10 @@ public class StudentServiceImpl implements StudentService {
                 //System.out.println("student"+"---->"+student);
                 Map<String, Object> map = student;
                 if (!name.equals(map.get("xm"))) {//请求学号对应名字与请求名字不符合
-                    return ResponseDataUtil.build(0, "信息错误", result);
+                    return ResponseDataUtil.build(0, "信息错误", null);
                 } else {//正确绑定情况
                     httpSession.setAttribute("student", map);
-                    return ResponseDataUtil.build(1, "正确", result);
+                    return ResponseDataUtil.build(1, "正确", null);
                 }
             }
         } else {

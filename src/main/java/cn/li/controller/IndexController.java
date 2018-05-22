@@ -25,8 +25,9 @@ public class IndexController {
     public ResponseData register1(@RequestBody Map<String,String > map, HttpSession httpSession){
         return studentService.checkNum(map.get("studentNum"),map.get("name"),httpSession);
     }
-    @ResponseBody
+
     @RequestMapping(value = "/register2",method = RequestMethod.GET)
+    @ResponseBody
     public ResponseData  register2(String phone,String password,HttpSession httpSession){
         System.out.println("phone: "+phone+" password: "+password);
         Map<String,Object> map = (Map<String, Object>) httpSession.getAttribute("student");
@@ -38,28 +39,32 @@ public class IndexController {
         return studentService.register(phone,password,studentNum);
 
     }
-    @ResponseBody
+
     @RequestMapping(value = "/login" ,method = RequestMethod.POST)
+    @ResponseBody
     public ResponseData login(String studentNum, String password, String imei) {
         System.out.println("studentNum"+studentNum+"--"+"password"+password);
         return studentService.login(studentNum, password, imei);
     }
-    @ResponseBody
+
     @RequestMapping("/autoLogin")
+    @ResponseBody
     public ResponseData autoLogin(String token) {
         System.out.println("token:  "+token);
         return studentService.autoLogin(token);
     }
 
-    @ResponseBody
+
     @RequestMapping(value = "/resetPassword",method = RequestMethod.POST)
+    @ResponseBody
     public ResponseData resetPassword(@RequestParam(value = "phone") String telephone,@RequestParam(value = "password") String password) {
         System.out.println("telephone:" + telephone + "--" + "password:" + password);
         return studentService.resetPassword(telephone, password);
     }
 
-    @ResponseBody
+
     @RequestMapping(value = "/updateUserInfo",method = RequestMethod.POST)
+    @ResponseBody
     public ResponseData updateUserInfo(Student student){
         System.out.println(student);
         return  studentService.updateUserInfo(student);

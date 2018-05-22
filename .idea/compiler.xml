@@ -7,10 +7,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="mango" />
+        <module name="xiaoMeeting" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="mango" target="1.5" />
+    <bytecodeTargetLevel target="1.8">
+      <module name="xiaoMeeting" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

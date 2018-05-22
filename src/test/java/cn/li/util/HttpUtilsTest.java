@@ -11,7 +11,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 public class HttpUtilsTest {
     @Test
     public void sendGet(){
-        String result = HttpUtils.sendGet("2016211883");
-        System.out.println(result);
+        //String result = HttpUtils.sendGet("2016211883");
+        //System.out.println(result);
     }
 }
