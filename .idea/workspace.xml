@@ -6,15 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3a7713e3-1876-4762-99d8-444b156f83aa" name="Default" comment="change project name">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_12.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/artifacts/mango_war.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/artifacts/mango_war2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/artifacts/mango_war_exploded.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/mango_war2/xiaomeeting.war" afterPath="" />
+    <list default="true" id="3a7713e3-1876-4762-99d8-444b156f83aa" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/li/conf/XiaoMeetingConfig.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/li/controller/IndexController.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/cn/li/dao/StudentDao.class" afterPath="" />
@@ -31,17 +23,8 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/mango/WEB-INF/classes/cn/li/controller/IndexController.class" afterPath="$PROJECT_DIR$/target/mango/WEB-INF/classes/cn/li/controller/IndexController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/mango/WEB-INF/classes/cn/li/service/impl/StudentServiceImpl.class" afterPath="$PROJECT_DIR$/target/mango/WEB-INF/classes/cn/li/service/impl/StudentServiceImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/mango/WEB-INF/classes/cn/li/util/HttpUtils.class" afterPath="$PROJECT_DIR$/target/mango/WEB-INF/classes/cn/li/util/HttpUtils.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/li/controller/IndexController.java" afterPath="$PROJECT_DIR$/src/main/java/cn/li/controller/IndexController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/li/service/impl/StudentServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/cn/li/service/impl/StudentServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/li/util/HttpUtils.java" afterPath="$PROJECT_DIR$/src/main/java/cn/li/util/HttpUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/cn/li/util/HttpUtilsTest.java" afterPath="$PROJECT_DIR$/src/test/java/cn/li/util/HttpUtilsTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/mango/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/target/mango/META-INF/MANIFEST.MF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xiaoMeeting.iml" afterPath="$PROJECT_DIR$/xiaoMeeting.iml" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -108,10 +91,10 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/li/service/impl/StudentServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="4128">
-              <caret line="96" column="53" lean-forward="false" selection-start-line="96" selection-start-column="53" selection-end-line="96" selection-end-column="53" />
+              <caret line="96" column="54" lean-forward="false" selection-start-line="96" selection-start-column="54" selection-end-line="96" selection-end-column="54" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1848#1864#0" expanded="true" />
+                <element signature="e#1849#1865#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1235,7 +1218,7 @@
       <workItem from="1526875719597" duration="11738000" />
       <workItem from="1526898136033" duration="2359000" />
       <workItem from="1526907734497" duration="3331000" />
-      <workItem from="1526977754007" duration="7511000" />
+      <workItem from="1526977754007" duration="7542000" />
     </task>
     <task id="LOCAL-00001" summary="xiaoMeeting">
       <created>1525858443214</created>
@@ -1258,7 +1241,14 @@
       <option name="project" value="LOCAL" />
       <updated>1526461616682</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="change project name">
+      <created>1526994122939</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1526994122939</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1294,7 +1284,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="142513000" />
+    <option name="totallyTimeSpent" value="142544000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1467,7 +1457,7 @@
           <caret line="40" column="13" lean-forward="true" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1848#1864#0" expanded="true" />
+            <element signature="e#1849#1865#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1775,10 +1765,10 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/li/service/impl/StudentServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4128">
-          <caret line="96" column="53" lean-forward="false" selection-start-line="96" selection-start-column="53" selection-end-line="96" selection-end-column="53" />
+          <caret line="96" column="54" lean-forward="false" selection-start-line="96" selection-start-column="54" selection-end-line="96" selection-end-column="54" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1848#1864#0" expanded="true" />
+            <element signature="e#1849#1865#0" expanded="true" />
           </folding>
         </state>
       </provider>
